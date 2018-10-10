@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>View Status</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,500">
+    <style type="text/css">
+        html,body {
+            background: #FEFEFE;
+        }
+        body {
+            color: #333;
+            font: 500 16px/1.125 'Roboto', sans-serif;
+            text-align: center;
+        }
+        h1,p {
+            margin: 0 0 0.25em;
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            width: 100%;
+        }
+        .heading {
+            font-size: 4em;
+            font-weight: 100;
+        }
+        .link {
+            color: #4078c0;
+            display: inline-block;
+            position: relative;
+            text-decoration: none;
+        }
+        .link::after {
+            background-color: currentColor;
+            bottom:0;
+            color: inherit;
+            content: '';
+            display: block;
+            height: 2px;
+            left:0;
+            max-width: 0%;
+            overflow: hidden;
+            position: absolute;
+            transform: translateY(100%);
+            transition: max-width 0.4s ease;
+            width: 100%;
+        }
+        .link:hover::after {
+            max-width: 100%;
+        }
+        @media screen and (min-width: 768px) {
+            body {
+                font-size: 18px;
+            }
+        }
+        @media screen and (min-width: 1024px) {
+            body {
+                font-size: 20px;
+            }
+        }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127218010-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-127218010-1');
+    </script>
+</head>
+<body>
+    <main class="hero">
+        <h1 class="heading">View Status</h1>
+        <p>A new project built with Laravel.</p>
+        <p><a class="link" href="https://github.com/ViewStatus/viewstatus">Follow development on <i class="fab fa-github"></i></a></p>
+    </main>
+</body>
+</html>
